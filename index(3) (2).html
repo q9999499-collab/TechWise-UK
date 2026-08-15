@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TechWise UK — Smart Tech Buying Guides</title>
+<meta name="description" content="TechWise UK helps you find smarter technology products, compare options and choose the right computer accessories, monitors, keyboards, docks and desk setup gear.">
+<style>
+:root{--navy:#101828;--navy2:#182536;--green:#087f5b;--green2:#0b9b70;--gold:#f5b942;--bg:#f3f5f7;--card:#fff;--text:#172033;--muted:#667085;--line:#e4e7ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}a{text-decoration:none;color:inherit}
+.top{background:var(--navy);color:#e9eef5;font-size:12px;padding:9px 0}.wrap{max-width:1240px;margin:auto;padding:0 20px}.top .wrap{display:flex;justify-content:space-between}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{height:74px;display:flex;align-items:center;gap:22px}.brand{font-size:25px;font-weight:900;letter-spacing:-1px;white-space:nowrap}.brand span{color:var(--green)}.uk{font-size:12px;color:var(--muted);margin-left:-14px}
+.search{display:flex;flex:1;max-width:600px}.search input{height:44px;flex:1;border:1px solid #cbd5e1;border-radius:9px 0 0 9px;padding:0 14px;font-size:14px}.search button{height:44px;border:0;background:var(--green);color:#fff;padding:0 19px;border-radius:0 9px 9px 0;font-weight:800}.navlinks{display:flex;gap:17px;font-size:13px;font-weight:800}.navlinks a:hover{color:var(--green)}
+.menu{background:var(--navy2);color:#fff}.menu .wrap{height:43px;display:flex;align-items:center;gap:25px;overflow:auto;white-space:nowrap;font-size:13px;font-weight:700}.menu a:hover{text-decoration:underline}
+.hero{background:linear-gradient(115deg,#e8f7f2,#fff 58%,#edf3ff);padding:65px 0}.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}.eyebrow{display:inline-block;background:#d9f4eb;color:var(--green);padding:8px 12px;border-radius:30px;font-size:11px;font-weight:900;text-transform:uppercase}.hero h1{font-size:52px;line-height:1.02;letter-spacing:-2.4px;margin:18px 0}.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:680px}.buttons{display:flex;gap:12px;margin-top:25px}.btn{padding:13px 18px;border-radius:9px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:900}.btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+.heroCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 20px 45px #10182812}.heroCard h3{margin:0 0 15px}.point{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}.point:last-child{border:0}.point b{color:var(--green)}
+section{padding:55px 0}.heading{margin-bottom:22px}.heading h2{font-size:30px;margin:0}.heading p{color:var(--muted);margin:7px 0 0}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.category{background:#fff;border:1px solid var(--line);border-radius:14px;padding:19px;transition:.18s}.category:hover{transform:translateY(-3px);box-shadow:0 15px 30px #10182812}.icon{height:100px;background:#f4f6f8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:48px}.category h3{font-size:16px;margin:12px 0 6px}.category p{font-size:12.5px;line-height:1.55;color:var(--muted);margin:0}.more{display:inline-block;color:#006d77;font-size:12px;font-weight:800;margin-top:12px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}.productImage{height:175px;background:#f6f7f9;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:65px}.badge{display:inline-block;background:#b42318;color:#fff;font-size:10px;font-weight:900;padding:5px 7px;margin-top:12px}.product h3{font-size:15px;line-height:1.4;margin:8px 0}.stars{color:#d9822b;font-size:13px}.product p{font-size:12px;line-height:1.55;color:var(--muted)}.price{font-size:24px;font-weight:900;margin:7px 0}.amazon{display:block;background:#ffd814;color:#111;padding:11px;border-radius:20px;text-align:center;font-size:12px;font-weight:900;border:1px solid #f0c000}
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.guide{background:#fff;border:1px solid var(--line);border-radius:14px;padding:23px}.guide h3{margin:0 0 9px;font-size:17px}.guide p{color:var(--muted);font-size:13px;line-height:1.65}.read{color:#006d77;font-size:12px;font-weight:900}
+.notice{background:#fff;border:1px solid var(--line);padding:18px;border-radius:12px;color:var(--muted);font-size:12px;line-height:1.7}
+footer{background:var(--navy);color:#c8d1dc;padding:45px 0}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}.foot h4{color:#fff;margin:0 0 13px}.foot a{display:block;font-size:12px;margin:8px 0}.copy{border-top:1px solid #2b394a;margin-top:25px;padding-top:17px;text-align:center;font-size:11px;color:#98a6b6}
+@media(max-width:900px){.heroGrid{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.top{display:none}.nav{height:auto;padding:13px 20px;flex-wrap:wrap}.brand{width:100%}.search{width:100%;order:3}.menu .wrap{gap:18px}.hero{padding:45px 0}.hero h1{font-size:38px}.categories,.products,.guides{grid-template-columns:1fr}.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span>🇬🇧 Independent technology buying guides for UK shoppers</span><span>Affiliate disclosure applies</span></div></div>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#">Tech<span>Wise</span> <small style="font-size:14px;color:#667085">UK</small></a>
+<form class="search" onsubmit="return findTech(event)"><input id="search" placeholder="Search technology, products and guides"><button>Search</button></form>
+<nav class="navlinks"><a href="#categories">Categories</a><a href="#products">Products</a><a href="#guides">Guides</a></nav>
+</div>
+</header>
+
+<div class="menu"><div class="wrap">
+<a href="#categories">☰ All Categories</a><a href="#accessories">Computer Accessories</a><a href="#monitors">Monitors</a><a href="#keyboards">Keyboards & Mice</a><a href="#docks">USB-C & Docks</a><a href="#desk">Desk Setup</a><a href="#guides">Buying Guides</a><a href="#deals">Deals</a>
+</div></div>
+
+<section class="hero">
+<div class="wrap heroGrid">
+<div>
+<span class="eyebrow">Smarter tech shopping</span>
+<h1>Choose technology with confidence.</h1>
+<p>TechWise UK brings together useful buying guides, product recommendations and essential technology categories to help UK shoppers make better choices.</p>
+<div class="buttons"><a class="btn primary" href="#categories">Explore Categories</a><a class="btn" href="#guides">Read Buying Guides</a></div>
+</div>
+<div class="heroCard">
+<h3>Why TechWise UK?</h3>
+<div class="point"><b>01</b><span>Simple product comparisons</span></div>
+<div class="point"><b>02</b><span>Practical buying advice</span></div>
+<div class="point"><b>03</b><span>Computer & desk essentials</span></div>
+<div class="point"><b>04</b><span>Links to trusted retailers</span></div>
+</div>
+</div>
+</section>
+
+<section id="categories"><div class="wrap">
+<div class="heading"><h2>Shop Technology Categories</h2><p>Explore the products people need for work, study, gaming and everyday computing.</p></div>
+<div class="categories">
+<a class="category" id="accessories" href="#products"><div class="icon">💻</div><h3>Computer Accessories</h3><p>Laptop stands, sleeves, cooling pads, chargers and more.</p><span class="more">Explore ›</span></a>
+<a class="category" id="monitors" href="#products"><div class="icon">🖥️</div><h3>Monitors</h3><p>4K, productivity, ultrawide, gaming and budget displays.</p><span class="more">Explore ›</span></a>
+<a class="category" id="keyboards" href="#products"><div class="icon">⌨️</div><h3>Keyboards & Mice</h3><p>Wireless, mechanical, ergonomic and quiet options.</p><span class="more">Explore ›</span></a>
+<a class="category" id="docks" href="#products"><div class="icon">🔌</div><h3>USB-C & Docks</h3><p>Hubs, docking stations, adapters and connectivity.</p><span class="more">Explore ›</span></a>
+<a class="category" id="desk" href="#products"><div class="icon">🪑</div><h3>Desk Setup</h3><p>Desk lamps, cable management, webcams and workspace gear.</p><span class="more">Explore ›</span></a>
+<a class="category" href="#products"><div class="icon">🎧</div><h3>Audio & Headsets</h3><p>Headphones, headsets, microphones and speakers.</p><span class="more">Explore ›</span></a>
+<a class="category" href="#products"><div class="icon">💾</div><h3>Storage & SSDs</h3><p>External drives, SSDs and everyday storage accessories.</p><span class="more">Explore ›</span></a>
+<a class="category" href="#deals"><div class="icon">🔥</div><h3>Deals & Offers</h3><p>Featured products and technology recommendations.</p><span class="more">See deals ›</span></a>
+</div>
+</div></section>
+
+<section id="products"><div class="wrap">
+<div class="heading"><h2>Featured Technology Picks</h2><p>Product cards are ready for your approved Amazon Associates links.</p></div>
+<div class="products">
+<article class="product"><div class="productImage">💻</div><span class="badge">FEATURED</span><h3>Laptop Accessories — Recommended Pick</h3><div class="stars">★★★★★</div><p>Check current price, availability and full specifications on Amazon.</p><div class="price">£39.99</div><a class="amazon" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article><article class="product"><div class="productImage">🖥️</div><span class="badge">FEATURED</span><h3>4K Monitor — Recommended Pick</h3><div class="stars">★★★★★</div><p>Check current price, availability and full specifications on Amazon.</p><div class="price">£249.99</div><a class="amazon" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article><article class="product"><div class="productImage">⌨️</div><span class="badge">FEATURED</span><h3>Mechanical Keyboard — Recommended Pick</h3><div class="stars">★★★★★</div><p>Check current price, availability and full specifications on Amazon.</p><div class="price">£79.99</div><a class="amazon" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article><article class="product"><div class="productImage">🔌</div><span class="badge">FEATURED</span><h3>USB-C Dock — Recommended Pick</h3><div class="stars">★★★★★</div><p>Check current price, availability and full specifications on Amazon.</p><div class="price">£89.99</div><a class="amazon" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article>
+</div></div></section>
+
+<section id="guides"><div class="wrap">
+<div class="heading"><h2>Buying Guides</h2><p>Helpful content designed around real technology shopping questions.</p></div>
+<div class="guides">
+<article class="guide"><h3>Best USB-C Hubs for Laptops</h3><p>Learn which ports, power delivery and display features matter before buying.</p><a class="read" href="#">Read guide ›</a></article>
+<article class="guide"><h3>Best Monitors for Home Office</h3><p>Compare size, resolution, connectivity and ergonomics for productive work.</p><a class="read" href="#">Read guide ›</a></article>
+<article class="guide"><h3>Mechanical vs Membrane Keyboards</h3><p>Understand the differences and choose the right typing experience.</p><a class="read" href="#">Read guide ›</a></article>
+</div></div></section>
+
+<section id="deals"><div class="wrap"><div class="notice"><strong>TechWise UK Deals:</strong> Featured offers and product recommendations will appear here. Always check the retailer for the latest price and availability.</div></div></section>
+
+<section><div class="wrap"><div class="notice"><strong>Affiliate Disclosure:</strong> TechWise UK may earn a commission from qualifying purchases made through affiliate links. Prices, availability and product details can change, so verify the current information on the retailer's website.</div></div></section>
+
+<footer><div class="wrap foot">
+<div><h4>TechWise UK</h4><p style="font-size:12px;line-height:1.7">Smart technology buying guides and product recommendations for UK shoppers.</p></div>
+<div><h4>Explore</h4><a href="#categories">Categories</a><a href="#products">Products</a><a href="#guides">Buying Guides</a><a href="#deals">Deals</a></div>
+<div><h4>Information</h4><a href="#">About Us</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+<div><h4>Affiliate</h4><a href="#">Affiliate Disclosure</a><a href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">Amazon UK</a></div>
+</div><div class="wrap copy">© 2026 TechWise UK. All rights reserved.</div></footer>
+
+<script>
+function findTech(e){
+ e.preventDefault();
+ const q=document.getElementById('search').value.toLowerCase().trim();
+ if(!q)return false;
+ const map={monitor:'#monitors',monitors:'#monitors',keyboard:'#keyboards',keyboards:'#keyboards',mouse:'#keyboards',mice:'#keyboards','usb-c':'#docks',dock:'#docks',docks:'#docks',desk:'#desk',accessories:'#accessories',laptop:'#accessories'};
+ for(const k in map){if(q.includes(k)){location.hash=map[k];return false}}
+ location.hash='#products';return false;
+}
+</script>
+</body>
+</html>
